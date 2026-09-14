@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinyuki Country Hotel | Luxury Accommodation &amp; Conferencing in Nanyuki, Kenya</title>
+  <meta name="description" content="Experience premier 5-star hospitality on the Equator in Nanyuki. 124 luxury rooms, HoneyComb restaurant, Stinger Lounge, and world-class event grounds." />
+  <meta name="keywords" content="Nanyuki luxury hotels, Mount Kenya accommodation, conferences in Nanyuki, Ol Pejeta safari lodges, Stinger Lounge Nanyuki" />
+  <meta property="og:title" content="Kinyuki Country Hotel | Luxury in Nanyuki, Kenya" />
+  <meta property="og:description" content="Premier 5-star hospitality on the Equator — 124 rooms, fine dining, conferencing and safaris." />
+  <meta property="og:image" content="assets/images/hero_aerial.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Shared Navigation -->
+  <div id="site-nav"></div>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="assets/images/hero_aerial.png" alt="Kinyuki Country Hotel aerial view, Nanyuki Kenya" />
+    </div>
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-badge">Nanyuki &nbsp;·&nbsp; Laikipia County &nbsp;·&nbsp; On the Equator</div>
+        <h1 class="hero-title">Where Contemporary <em>Luxury</em><br>Meets the Equator</h1>
+        <p class="hero-sub">A seamless blend of comfort, leisure, world-class gastronomy, and unforgettable events at the foot of Mount Kenya.</p>
+        <div class="hero-actions">
+          <a href="accommodation.html" class="btn btn-gold" id="hero-cta-accommodation">
+            <i class="fa fa-bed"></i> Explore Accommodation
+          </a>
+          <a href="events.html" class="btn btn-outline-gold" id="hero-cta-events">
+            <i class="fa fa-calendar-alt"></i> Plan an Event
+          </a>
+        </div>
+
+        <!-- Quick Booking Widget -->
+        <div class="booking-widget">
+          <div class="booking-widget-title">
+            <i class="fa fa-calendar-check" style="color:var(--gold);margin-right:8px;"></i>
+            Quick Availability Check
+          </div>
+          <div class="booking-grid">
+            <div class="booking-field">
+              <label for="checkin">Check-In</label>
+              <input type="date" id="checkin" name="checkin" />
+            </div>
+            <div class="booking-field">
+              <label for="checkout">Check-Out</label>
+              <input type="date" id="checkout" name="checkout" />
+            </div>
+            <div class="booking-field">
+              <label for="guests">Guests</label>
+              <select id="guests" name="guests">
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 or more Guests</option>
+              </select>
+            </div>
+            <div class="booking-field">
+              <label for="room-type">Room Type</label>
+              <select id="room-type" name="room-type">
+                <option>Deluxe Room</option>
+                <option>Superior Room</option>
+                <option>2-Bedroom Cottage</option>
+                <option>3-Bedroom VIP Cottage</option>
+              </select>
+            </div>
+            <button class="booking-submit" id="booking-check-btn" onclick="openBookingModal()">
+              Check Availability
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       OVERVIEW
+  ═══════════════════════════════════════ -->
+  <section class="overview" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text">
+          <span class="section-label reveal">The Kinyuki Story</span>
+          <h2 class="section-title reveal reveal-delay-1">The Kinyuki<br>Experience</h2>
+          <div class="gold-divider reveal reveal-delay-1"></div>
+          <p class="overview-body reveal reveal-delay-2">
+            Kinyuki Country Hotel is a contemporary luxury country hotel located in Nanyuki, Laikipia County, Kenya. We offer a seamless blend of comfort, leisure, dining, and events. Designed as a versatile hospitality destination, the hotel caters to leisure travellers, corporate clients, event organisers, and international tourists seeking quality service and memorable experiences.
+          </p>
+          <p class="overview-body reveal reveal-delay-2">
+            With a total of 124 rooms, expansive grounds, modern facilities, and diverse food and beverage outlets, Kinyuki Country Hotel positions itself as a one-stop destination for accommodation, dining, entertainment, conferencing, and social events within the greater Nanyuki region.
+          </p>
+
+          <div class="vm-cards reveal reveal-delay-3">
+            <div class="vm-card">
+              <h4>Our Vision</h4>
+              <p>To be the leading country hotel in Nanyuki, recognised for exceptional service, vibrant experiences, and memorable guest journeys.</p>
+            </div>
+            <div class="vm-card">
+              <h4>Our Mission</h4>
+              <p>To deliver high-quality hospitality experiences through personalised service, comfortable accommodation, diverse dining, and well-curated events.</p>
+            </div>
+          </div>
+
+          <div class="values-grid reveal reveal-delay-4">
+            <div class="value-chip"><span class="dot"></span> Guest-Centric Service</div>
+            <div class="value-chip"><span class="dot"></span> Excellence</div>
+            <div class="value-chip"><span class="dot"></span> Integrity</div>
+            <div class="value-chip"><span class="dot"></span> Professionalism</div>
+            <div class="value-chip"><span class="dot"></span> Innovation</div>
+          </div>
+        </div>
+
+        <div class="overview-image reveal reveal-delay-2">
+          <div class="overview-img-wrap">
+            <img src="assets/images/hotel_exterior.png" alt="Kinyuki Country Hotel exterior facade, Nanyuki Kenya" />
+            <div class="overview-stats">
+              <div class="stat">
+                <span class="stat-num">124</span>
+                <span class="stat-label">Luxury Rooms</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">4</span>
+                <span class="stat-label">Dining Outlets</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">300+</span>
+                <span class="stat-label">Event Capacity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       LOCATION
+  ═══════════════════════════════════════ -->
+  <section class="location-section" id="location">
+    <div class="container">
+      <div class="location-header">
+        <span class="section-label reveal" style="display:block;text-align:center;">Strategic Location</span>
+        <h2 class="section-title light reveal reveal-delay-1" style="text-align:center;">Prime Location &amp;<br>Strategic Accessibility</h2>
+        <div class="gold-divider centered reveal reveal-delay-1"></div>
+        <p class="section-sub light reveal reveal-delay-2" style="margin:0 auto;text-align:center;">An elite geographic advantage placing you at the crossroads of adventure and business.</p>
+      </div>
+
+      <div class="location-cards">
+        <div class="location-card reveal">
+          <div class="location-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+          </div>
+          <h3>Aviation Hub</h3>
+          <p>Minutes from Nanyuki Airstrip, providing seamless chartered access for tourists and executive delegates. Just a 45-minute flight from Nairobi.</p>
+        </div>
+        <div class="location-card reveal reveal-delay-1">
+          <div class="location-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <h3>The Equator Line</h3>
+          <p>Situated precisely on the Equator Line, offering the rare and thrilling milestone of staying in two hemispheres simultaneously.</p>
+        </div>
+        <div class="location-card reveal reveal-delay-2">
+          <div class="location-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Gateway to the North</h3>
+          <p>The premier base for excursions into the Laikipia Plateau, Mount Kenya National Park, Ol Pejeta Conservancy, and the Samburu safari circuit.</p>
+        </div>
+      </div>
+
+      <div class="location-panorama reveal">
+        <img src="assets/images/safari_wildlife.png" alt="Panoramic view of the Laikipia savannah and Mount Kenya" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ACCOMMODATION PREVIEW
+  ═══════════════════════════════════════ -->
+  <section class="accommodation" id="accommodation">
+    <div class="container">
+      <div class="accommodation-header">
+        <div>
+          <span class="section-label reveal">124 Rooms &amp; Cottages</span>
+          <h2 class="section-title reveal reveal-delay-1">Bespoke Sanctuaries</h2>
+          <div class="gold-divider reveal reveal-delay-1"></div>
+          <p class="section-sub reveal reveal-delay-2">Thoughtfully designed for deep rest, corporate productivity, and family leisure.</p>
+        </div>
+        <a href="accommodation.html" class="btn btn-outline-dark reveal reveal-delay-2" id="view-all-rooms">
+          View All Rooms <i class="fa fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="room-tabs reveal">
+        <button class="tab-btn active" id="tab-deluxe" onclick="switchTab('deluxe')">Deluxe &amp; Superior</button>
+        <button class="tab-btn" id="tab-cottage2" onclick="switchTab('cottage2')">2-Bed Cottages</button>
+        <button class="tab-btn" id="tab-cottage3" onclick="switchTab('cottage3')">3-Bed VIP Cottages</button>
+      </div>
+
+      <div class="room-panel active" id="panel-deluxe">
+        <div class="room-showcase reveal">
+          <div class="room-image">
+            <span class="room-badge">Deluxe &amp; Superior</span>
+            <img src="assets/images/deluxe_room.png" alt="Deluxe Room with Mount Kenya view at Kinyuki Hotel" />
+          </div>
+          <div class="room-info">
+            <div class="room-type-label">Guest Rooms</div>
+            <h2>Deluxe &amp; Superior Rooms</h2>
+            <p class="room-desc">Experience refined luxury in our elegantly appointed rooms. Floor-to-ceiling windows frame the majestic Mount Kenya peaks, creating a living canvas that changes with the light.</p>
+            <div class="room-amenities">
+              <div class="amenity"><i class="fa fa-bed am-icon"></i> King-size bed</div>
+              <div class="amenity"><i class="fa fa-bath am-icon"></i> Full bathtub</div>
+              <div class="amenity"><i class="fa fa-wifi am-icon"></i> Fibre Wi-Fi</div>
+              <div class="amenity"><i class="fa fa-mountain am-icon"></i> Mountain views</div>
+              <div class="amenity"><i class="fa fa-snowflake am-icon"></i> Air conditioning</div>
+              <div class="amenity"><i class="fa fa-concierge-bell am-icon"></i> 24/7 Room service</div>
+            </div>
+            <div class="room-ideal">
+              <span>Ideal For</span>
+              <p>Solo business executives, couples, and weekend getaways</p>
+            </div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <button class="btn btn-gold" onclick="openBookingModal()" id="book-deluxe">Reserve This Room</button>
+              <a href="accommodation.html" class="btn btn-outline-dark">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-panel" id="panel-cottage2">
+        <div class="room-showcase reveal">
+          <div class="room-image">
+            <span class="room-badge">2-Bedroom Cottage</span>
+            <img src="assets/images/cottage_exterior.png" alt="2-Bedroom Ensuite Cottage at Kinyuki Country Hotel" />
+          </div>
+          <div class="room-info">
+            <div class="room-type-label">Private Cottages</div>
+            <h2>2-Bedroom Ensuite Cottages</h2>
+            <p class="room-desc">Charming standalone cottages that offer the privacy of a home with the indulgence of a five-star hotel. Each features a private balcony overlooking our lush tropical gardens.</p>
+            <div class="room-amenities">
+              <div class="amenity"><i class="fa fa-bed am-icon"></i> 2 ensuite bedrooms</div>
+              <div class="amenity"><i class="fa fa-couch am-icon"></i> Private living room</div>
+              <div class="amenity"><i class="fa fa-utensils am-icon"></i> Kitchenette</div>
+              <div class="amenity"><i class="fa fa-leaf am-icon"></i> Garden patio</div>
+              <div class="amenity"><i class="fa fa-lock am-icon"></i> Private entrance</div>
+              <div class="amenity"><i class="fa fa-hat-chef am-icon"></i> Private chef option</div>
+            </div>
+            <div class="room-ideal">
+              <span>Ideal For</span>
+              <p>Families, group getaways, and long-stay corporate leadership</p>
+            </div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <button class="btn btn-gold" onclick="openBookingModal()" id="book-cottage2">Reserve This Cottage</button>
+              <a href="accommodation.html" class="btn btn-outline-dark">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="room-panel" id="panel-cottage3">
+        <div class="room-showcase reveal">
+          <div class="room-image">
+            <span class="room-badge" style="background:var(--gold);color:var(--burgundy-deep);">Signature Collection</span>
+            <img src="assets/images/pool_bar.png" alt="3-Bedroom VIP Cottage at Kinyuki Country Hotel" />
+          </div>
+          <div class="room-info">
+            <div class="room-type-label" style="color:#B8860B;">Signature Collection · Opening Soon</div>
+            <h2>3-Bedroom VIP Cottages</h2>
+            <p class="room-desc">The pinnacle of ultra-luxury living at Kinyuki. Our Signature Collection VIP Cottages represent the absolute zenith of personalised hospitality in the Nanyuki region.</p>
+            <div class="room-amenities">
+              <div class="amenity"><i class="fa fa-swimming-pool am-icon"></i> Private pool</div>
+              <div class="amenity"><i class="fa fa-umbrella-beach am-icon"></i> Private gazebo</div>
+              <div class="amenity"><i class="fa fa-hat-chef am-icon"></i> 24/7 Private chef</div>
+              <div class="amenity"><i class="fa fa-bed am-icon"></i> 3 luxury bedrooms</div>
+              <div class="amenity"><i class="fa fa-leaf am-icon"></i> Landscaped garden</div>
+              <div class="amenity"><i class="fa fa-concierge-bell am-icon"></i> Concierge service</div>
+            </div>
+            <div class="room-ideal">
+              <span>Ideal For</span>
+              <p>VIP delegations, luxury family holidays, high-profile retreats</p>
+            </div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <button class="btn btn-gold" onclick="openBookingModal()" id="book-cottage3">Pre-Register Interest</button>
+              <a href="accommodation.html" class="btn btn-outline-dark">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       DINING PREVIEW
+  ═══════════════════════════════════════ -->
+  <section class="dining" id="dining">
+    <div class="container">
+      <div class="dining-header">
+        <span class="section-label reveal" style="display:block;text-align:center;">4 Distinct Outlets</span>
+        <h2 class="section-title gold reveal reveal-delay-1" style="text-align:center;">Gastronomy &amp; Vibrant<br>Social Spaces</h2>
+        <div class="gold-divider centered reveal reveal-delay-1"></div>
+        <p class="section-sub light reveal reveal-delay-2" style="margin:0 auto;text-align:center;">Dining at Kinyuki is an immersive sensory celebration. From farm-to-table breakfast spreads to high-energy nightlife, our four distinct outlets deliver world-class culinary artistry.</p>
+      </div>
+
+      <div class="dining-outlets reveal">
+        <div class="dining-card" onclick="navigateTo('dining.html')">
+          <img src="assets/images/honeycomb_restaurant.png" alt="The HoneyComb Restaurant interior, Kinyuki Hotel" />
+          <div class="dining-card-content">
+            <div class="dining-card-tag">Fine Dining &nbsp;·&nbsp; 300+ Capacity</div>
+            <h3>The HoneyComb Restaurant</h3>
+            <div class="dining-card-sub">The Epicentre of Local &amp; Global Flavours</div>
+            <div class="dining-card-detail">Sophisticated high-ceilinged dining hall merging authentic Kenyan heritage with global fine dining. Famous for the Sunday Country Brunch with live meat carving stations.</div>
+          </div>
+        </div>
+        <div class="dining-card" onclick="navigateTo('dining.html')">
+          <img src="assets/images/stinger_lounge.png" alt="The Stinger Lounge nightlife, Kinyuki Hotel" />
+          <div class="dining-card-content">
+            <div class="dining-card-tag">Premium Lounge &nbsp;·&nbsp; 500+ Capacity</div>
+            <h3>The Stinger Lounge</h3>
+            <div class="dining-card-sub">Where Luxury Meets Rhythm</div>
+            <div class="dining-card-detail">Nanyuki's premier high-energy lounge with resident mixologists, curated wine cellar, and a state-of-the-art acoustic sound system for live events.</div>
+          </div>
+        </div>
+        <div class="dining-card" onclick="navigateTo('dining.html')">
+          <img src="assets/images/pool_bar.png" alt="The Stinger Pool Bar and Grill, Kinyuki Hotel" />
+          <div class="dining-card-content">
+            <div class="dining-card-tag">Pool Bar &amp; Grill &nbsp;·&nbsp; Outdoor</div>
+            <h3>Stinger Pool Bar &amp; Grill</h3>
+            <div class="dining-card-sub">Sun-Drenched Relaxation</div>
+            <div class="dining-card-detail">Tropical outdoor oasis overlooking the heated infinity pool. Wood-fired pizzas and the renowned Executive Mbuzi Roast every weekend.</div>
+          </div>
+        </div>
+        <div class="dining-card" onclick="navigateTo('dining.html')">
+          <img src="assets/images/hotel_exterior.png" alt="Kinyuki Cafe and Bakery" />
+          <div class="dining-card-content">
+            <div class="dining-card-tag">Cafe &amp; Bakery &nbsp;·&nbsp; Artisanal</div>
+            <h3>The Kinyuki Cafe &amp; Bakery</h3>
+            <div class="dining-card-sub">Artisanal Comfort in Every Sip</div>
+            <div class="dining-card-detail">Single-origin Kenyan coffees, handcrafted sourdough, fresh pastries, and gourmet deli sandwiches. Perfect for the Explorer's Breakfast or high tea.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="private-dining reveal">
+        <div class="private-dining-text">
+          <span class="section-label">Bespoke Dining</span>
+          <h3>Private &amp; In-Room Dining</h3>
+          <div class="gold-divider"></div>
+          <div class="service-list">
+            <div class="service-item">
+              <div class="service-icon"><i class="fa fa-concierge-bell"></i></div>
+              <div>
+                <h4>24/7 Room Service</h4>
+                <p>Full gourmet menu delivered to your room with five-star plating, at any hour.</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-icon"><i class="fa fa-hat-chef"></i></div>
+              <div>
+                <h4>The Cottage Chef Experience</h4>
+                <p>Private chef preparing customised 5-course dinners inside 2-Bedroom and VIP Cottages.</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <div class="service-icon"><i class="fa fa-fire"></i></div>
+              <div>
+                <h4>Bush Dinners &amp; Sundowners</h4>
+                <p>Curated lantern-lit dinners and evening bonfires across our expansive hotel grounds.</p>
+              </div>
+            </div>
+          </div>
+          <a href="dining.html" class="btn btn-outline-gold" style="margin-top:28px;">
+            Explore All Dining <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="private-dining-image">
+          <img src="assets/images/honeycomb_restaurant.png" alt="Gourmet dining at Kinyuki Country Hotel" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EVENTS PREVIEW
+  ═══════════════════════════════════════ -->
+  <section class="events" id="events">
+    <div class="container">
+      <div class="events-header">
+        <span class="section-label reveal">Conferencing &amp; Celebrations</span>
+        <h2 class="section-title reveal reveal-delay-1">Corporate Excellence &amp;<br>Memorable Celebrations</h2>
+        <div class="gold-divider reveal reveal-delay-1"></div>
+        <p class="section-sub reveal reveal-delay-2">From high-level diplomatic symposiums to dream outdoor garden weddings, Kinyuki Country Hotel offers unparalleled versatility and scale.</p>
+      </div>
+
+      <div class="events-pillars">
+        <div class="pillar-card reveal">
+          <div class="pillar-image">
+            <img src="assets/images/conference_hall.png" alt="Executive conference hall at Kinyuki Country Hotel" />
+            <span class="pillar-badge">Up to 300 Delegates</span>
+          </div>
+          <div class="pillar-info">
+            <h3>Executive Conference Halls</h3>
+            <ul>
+              <li>Modern AV technology and smart displays</li>
+              <li>Ergonomic seating and enterprise Wi-Fi</li>
+              <li>Full-day and half-day delegate packages</li>
+              <li>Dedicated event coordinators</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pillar-card reveal reveal-delay-1">
+          <div class="pillar-image">
+            <img src="assets/images/wedding_garden.png" alt="Luxury wedding garden at Kinyuki Country Hotel" />
+            <span class="pillar-badge">300+ Outdoor Guests</span>
+          </div>
+          <div class="pillar-info">
+            <h3>Expansive Landscaped Gardens</h3>
+            <ul>
+              <li>Manicured lawns for weddings and concerts</li>
+              <li>Corporate team-building spaces</li>
+              <li>Gala cocktail reception areas</li>
+              <li>Floral decor and setup packages</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pillar-card reveal reveal-delay-2">
+          <div class="pillar-image">
+            <img src="assets/images/honeycomb_restaurant.png" alt="Turnkey event coordination at Kinyuki Hotel" />
+            <span class="pillar-badge">Turnkey Service</span>
+          </div>
+          <div class="pillar-info">
+            <h3>Turnkey Event Coordination</h3>
+            <ul>
+              <li>End-to-end event planning team</li>
+              <li>Bespoke banquet menus</li>
+              <li>Outdoor live roasting stations</li>
+              <li>Custom branding and theming</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="events-cta-bar reveal">
+        <div>
+          <h3>Ready to Host Your Event?</h3>
+          <p>Contact our dedicated events team for a bespoke quote and complimentary site visit.</p>
+        </div>
+        <div class="events-cta-actions">
+          <button class="btn btn-gold" id="rfq-btn" onclick="openRFQModal()">
+            <i class="fa fa-paper-plane"></i> Request a Quote
+          </button>
+          <a href="events.html" class="btn btn-outline-gold">View Event Spaces</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EXPERIENCES PREVIEW
+  ═══════════════════════════════════════ -->
+  <section class="experiences" id="experiences">
+    <div class="container">
+      <div class="experiences-header">
+        <span class="section-label reveal">Adventures &amp; Leisure</span>
+        <h2 class="section-title reveal reveal-delay-1">Unrivalled Experiences &amp;<br>Curated Adventures</h2>
+        <div class="gold-divider reveal reveal-delay-1"></div>
+        <p class="section-sub reveal reveal-delay-2">Beyond the hotel, a world of extraordinary adventure and natural wonder awaits at your doorstep.</p>
+      </div>
+
+      <div class="experience-cards">
+        <div class="exp-card reveal">
+          <div class="exp-card-header">
+            <div class="exp-icon"><i class="fa fa-paw"></i></div>
+            <div class="exp-text">
+              <h3>Safari &amp; Wildlife Conservation</h3>
+              <p>Minutes away from Ol Pejeta Conservancy, sanctuary to the world's last Northern White Rhinos and the famed Sweetwaters Chimpanzee Sanctuary.</p>
+            </div>
+          </div>
+          <div class="exp-footer">
+            <span class="exp-tag">Day Trip</span>
+            <span class="exp-tag">Half-Day</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal reveal-delay-1">
+          <div class="exp-card-header">
+            <div class="exp-icon"><i class="fa fa-mountain"></i></div>
+            <div class="exp-text">
+              <h3>Alpine Adventure &amp; Hiking</h3>
+              <p>Guided expeditions to Mount Kenya's Sirimon Gate and exhilarating canopy walks over the azure pools of Ngare Ndare Forest.</p>
+            </div>
+          </div>
+          <div class="exp-footer">
+            <span class="exp-tag">Guided Tours</span>
+            <span class="exp-tag">Multi-Day</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal reveal-delay-2">
+          <div class="exp-card-header">
+            <div class="exp-icon"><i class="fa fa-horse"></i></div>
+            <div class="exp-text">
+              <h3>Equestrian &amp; Savannah Biking</h3>
+              <p>Exclusive bespoke arrangements for horseback safaris and mountain biking trails across the untouched Laikipia savannah.</p>
+            </div>
+          </div>
+          <div class="exp-footer">
+            <span class="exp-tag">Bespoke</span>
+            <span class="exp-tag">Scenic</span>
+          </div>
+        </div>
+
+        <div class="exp-card reveal reveal-delay-3">
+          <div class="exp-card-header">
+            <div class="exp-icon"><i class="fa fa-spa"></i></div>
+            <div class="exp-text">
+              <h3>Wellness &amp; In-Hotel Recreation</h3>
+              <p>Signature heated swimming pool, steam room, and sauna. Our forthcoming Kinyuki Spa &amp; Wellness Centre will offer holistic rejuvenation programmes.</p>
+            </div>
+          </div>
+          <div class="exp-footer">
+            <span class="exp-tag">On-Site</span>
+            <span class="exp-tag">Upcoming Spa</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="experiences-panorama reveal">
+        <img src="assets/images/safari_wildlife.png" alt="Laikipia safari landscape with Mount Kenya backdrop" />
+        <div class="experiences-panorama-overlay">
+          <h3>Laikipia Awaits</h3>
+          <p>Adventures at Your Doorstep</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       DISTINCTION / USPs
+  ═══════════════════════════════════════ -->
+  <section class="distinction" id="distinction">
+    <div class="container">
+      <div class="distinction-header">
+        <span class="section-label reveal" style="display:block;text-align:center;">Why Kinyuki</span>
+        <h2 class="section-title light reveal reveal-delay-1" style="text-align:center;">The Kinyuki Distinction</h2>
+        <div class="gold-divider centered reveal reveal-delay-1"></div>
+        <p class="section-sub light reveal reveal-delay-2" style="margin:0 auto;text-align:center;">Three pillars that set us apart as Nanyuki's premier luxury destination.</p>
+      </div>
+      <div class="distinction-pillars">
+        <div class="distinction-pillar reveal">
+          <span class="pillar-number">01</span>
+          <div class="distinction-pillar-icon"><i class="fa fa-map-marker-alt"></i></div>
+          <h3>Prime Location</h3>
+          <p>Minutes from Nanyuki Airstrip, sitting directly on the Equator, with direct access to world-renowned conservancies and national parks.</p>
+        </div>
+        <div class="distinction-pillar reveal reveal-delay-1">
+          <span class="pillar-number">02</span>
+          <div class="distinction-pillar-icon"><i class="fa fa-building"></i></div>
+          <h3>Unmatched Capacity</h3>
+          <p>One of the rare properties in the Mount Kenya region capable of hosting 300+ delegates and guests simultaneously for accommodation and large-scale banqueting.</p>
+        </div>
+        <div class="distinction-pillar reveal reveal-delay-2">
+          <span class="pillar-number">03</span>
+          <div class="distinction-pillar-icon"><i class="fa fa-star"></i></div>
+          <h3>Total Versatility</h3>
+          <p>Multiple dining concepts, energetic nightlife, peaceful nature walks, and executive conferencing, all within a single gated estate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SAFETY
+  ═══════════════════════════════════════ -->
+  <section class="safety" id="safety">
+    <div class="container">
+      <div class="safety-grid">
+        <div>
+          <span class="section-label reveal">Our Commitment</span>
+          <h2 class="section-title reveal reveal-delay-1">Safety &amp; Community</h2>
+          <div class="gold-divider reveal reveal-delay-1"></div>
+          <p class="section-sub reveal reveal-delay-2">At Kinyuki, true luxury includes the highest standards of safety, environmental responsibility, and community care.</p>
+          <a href="contact.html" class="btn btn-burgundy" style="margin-top:30px;" id="safety-contact-btn">
+            Learn More <i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="safety-items">
+          <div class="safety-item reveal">
+            <i class="fa fa-shield-alt safety-item-icon"></i>
+            <div>
+              <h4>24/7 Professional Security</h4>
+              <p>Dedicated security teams operating around the clock, CCTV surveillance, and stringent access control protocols throughout the estate.</p>
+            </div>
+          </div>
+          <div class="safety-item reveal reveal-delay-1">
+            <i class="fa fa-fire-extinguisher safety-item-icon"></i>
+            <div>
+              <h4>Fire Safety Compliance</h4>
+              <p>Full compliance with international fire safety standards, including emergency evacuation systems and regular staff safety drills.</p>
+            </div>
+          </div>
+          <div class="safety-item reveal reveal-delay-2">
+            <i class="fa fa-leaf safety-item-icon"></i>
+            <div>
+              <h4>Sustainable Community Tourism</h4>
+              <p>Committed to Laikipia community upliftment through direct local employment and sourcing organic kitchen produce from regional farmers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PARTNERS
+  ═══════════════════════════════════════ -->
+  <section class="partners" id="partners">
+    <div class="container">
+      <span class="section-label reveal" style="display:block;text-align:center;">Trusted Partners</span>
+      <h2 class="section-title reveal reveal-delay-1" style="text-align:center;">Trusted by Industry Leaders<br>&amp; Institutions</h2>
+      <div class="gold-divider centered reveal reveal-delay-1"></div>
+      <p class="partners-desc reveal reveal-delay-2">Proud to host high-level government delegations, multinational corporations, and international missions.</p>
+      <div class="partners-logos reveal reveal-delay-3">
+        <div class="partner-logo">
+          <div class="partner-icon"><i class="fa fa-landmark" style="color:var(--gold);font-size:26px;"></i></div>
+          <div class="partner-name">Republic of Kenya</div>
+          <div class="partner-dept">Office of the Deputy President</div>
+        </div>
+        <div class="partner-logo">
+          <div class="partner-icon"><i class="fa fa-gas-pump" style="color:var(--gold);font-size:26px;"></i></div>
+          <div class="partner-name">Vivo Energy</div>
+          <div class="partner-dept">Shell Licensee, East Africa</div>
+        </div>
+        <div class="partner-logo">
+          <div class="partner-icon"><i class="fa fa-shield-alt" style="color:var(--gold);font-size:26px;"></i></div>
+          <div class="partner-name">BATUK</div>
+          <div class="partner-dept">British Army Training Unit Kenya</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <img src="assets/images/logo.png" alt="Kinyuki Country Hotel" class="footer-logo-img" />
+          <p class="footer-slogan">"Refined Hospitality in the Heart of Nanyuki" — a seamless blend of luxury, leisure, dining, and unforgettable events on the Equator.</p>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa fa-phone fc-icon"></i>
+              <a href="tel:+254748988338">+254 748 988338</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa fa-envelope fc-icon"></i>
+              <a href="mailto:info@kinyukicountryhotel.com">info@kinyukicountryhotel.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa fa-globe fc-icon"></i>
+              <a href="#">www.kinyukicountryhotel.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa fa-map-marker-alt fc-icon"></i>
+              <span>Nanyuki, Nyeri / Laikipia County, Kenya</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="accommodation.html">Rooms &amp; Cottages</a>
+            <a href="dining.html">Dining &amp; Nightlife</a>
+            <a href="events.html">Conferencing &amp; Weddings</a>
+            <a href="experiences.html">Safaris &amp; Day Trips</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Dining Outlets</h4>
+          <div class="footer-links">
+            <a href="dining.html">The HoneyComb Restaurant</a>
+            <a href="dining.html">The Stinger Lounge</a>
+            <a href="dining.html">Stinger Pool Bar &amp; Grill</a>
+            <a href="dining.html">Kinyuki Cafe &amp; Bakery</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Find Us</h4>
+          <a href="https://maps.google.com/?q=Kinyuki+Country+Hotel+Nanyuki" target="_blank" class="footer-map-link">
+            <i class="fa fa-map-marked-alt fm-icon"></i>
+            <span class="fm-label">Open in Google Maps</span>
+            <span class="fm-sub">Nanyuki, Laikipia County</span>
+          </a>
+          <div style="margin-top:22px;">
+            <h4>Follow Us</h4>
+            <div style="display:flex;gap:9px;margin-top:11px;">
+              <a href="#" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.48);font-size:13px;transition:all 0.2s;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--burgundy-deep)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.48)'"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.48);font-size:13px;transition:all 0.2s;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--burgundy-deep)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.48)'"><i class="fab fa-instagram"></i></a>
+              <a href="#" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.48);font-size:13px;transition:all 0.2s;" onmouseover="this.style.background='var(--gold)';this.style.color='var(--burgundy-deep)'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.48)'"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://wa.me/254748988338" target="_blank" style="width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.48);font-size:13px;transition:all 0.2s;" onmouseover="this.style.background='#25D366';this.style.color='#fff'" onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.48)'"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-container" style="margin-top:0;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d82583.0769201522!2d36.99770835873363!3d-0.00838916122860489!2m3!1f0!2f0!3f0!3m2!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18281dc6771fd357%3A0xd5276d6fa4055410!2sKinyuki%20Country%20Hotel!5e0!3m2!1sen!2ske!4v1789384541715!5m2!1sen!2ske"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          title="Kinyuki Country Hotel location on Google Maps">
+        </iframe>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Kinyuki Country Hotel. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Reserve Your Stay</h2>
+        <button class="modal-close" onclick="closeBookingModal()" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="booking-form" onsubmit="submitBooking(event)">
+          <div class="form-row">
+            <div class="form-group"><label for="b-name">Full Name</label><input type="text" id="b-name" required placeholder="Your full name" /></div>
+            <div class="form-group"><label for="b-email">Email Address</label><input type="email" id="b-email" required placeholder="your@email.com" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="b-phone">Phone Number</label><input type="tel" id="b-phone" required placeholder="+254 7XX XXX XXX" /></div>
+            <div class="form-group"><label for="b-room">Room Type</label><select id="b-room"><option>Deluxe Room</option><option>Superior Room</option><option>2-Bed Ensuite Cottage</option><option>3-Bed VIP Cottage</option></select></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="b-checkin">Check-In Date</label><input type="date" id="b-checkin" required /></div>
+            <div class="form-group"><label for="b-checkout">Check-Out Date</label><input type="date" id="b-checkout" required /></div>
+          </div>
+          <div class="form-group"><label for="b-guests">Number of Guests</label><select id="b-guests"><option>1 Guest</option><option>2 Guests</option><option>3 Guests</option><option>4 or more</option></select></div>
+          <div class="form-group"><label for="b-notes">Special Requests</label><textarea id="b-notes" placeholder="Dietary requirements, special occasions, or preferences..."></textarea></div>
+          <button type="submit" class="form-submit" id="booking-submit-btn">Send Reservation Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- RFQ MODAL -->
+  <div class="modal-overlay" id="rfq-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Request Event Quote</h2>
+        <button class="modal-close" onclick="closeRFQModal()" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="rfq-form" onsubmit="submitRFQ(event)">
+          <div class="form-row">
+            <div class="form-group"><label for="r-name">Contact Name</label><input type="text" id="r-name" required placeholder="Your full name" /></div>
+            <div class="form-group"><label for="r-org">Organisation</label><input type="text" id="r-org" placeholder="Your company name" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="r-email">Email Address</label><input type="email" id="r-email" required placeholder="your@email.com" /></div>
+            <div class="form-group"><label for="r-phone">Phone Number</label><input type="tel" id="r-phone" required placeholder="+254 7XX XXX XXX" /></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="r-type">Event Type</label><select id="r-type"><option>Corporate Conference</option><option>Wedding / Reception</option><option>Gala Dinner</option><option>Team Building</option><option>Product Launch</option><option>Diplomatic Summit</option><option>Other</option></select></div>
+            <div class="form-group"><label for="r-guests">Expected Guests</label><select id="r-guests"><option>Under 50</option><option>50-100</option><option>100-200</option><option>200-300</option><option>300+</option></select></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="r-date">Event Date</label><input type="date" id="r-date" required /></div>
+            <div class="form-group"><label for="r-duration">Duration</label><select id="r-duration"><option>Half Day</option><option>Full Day</option><option>2 Days</option><option>3 or more Days</option></select></div>
+          </div>
+          <div class="form-group"><label for="r-notes">Additional Requirements</label><textarea id="r-notes" placeholder="Accommodation needs, catering preferences, AV requirements, theming..."></textarea></div>
+          <button type="submit" class="form-submit" id="rfq-submit-btn">Submit Request for Quote</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="sticky-cta" id="sticky-cta">
+    <button class="sticky-btn" onclick="openBookingModal()" id="sticky-reserve-btn">
+      <i class="fa fa-calendar-check"></i> Reserve Your Stay
+    </button>
+  </div>
+
+  <script src="js/shared-nav.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
