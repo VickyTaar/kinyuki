@@ -21,9 +21,17 @@
        HERO
   ═══════════════════════════════════════ -->
   <section class="hero" id="hero">
+    <!-- YouTube Video Background -->
     <div class="hero-bg">
-      <img src="assets/images/hero_aerial.png" alt="Kinyuki Country Hotel aerial view, Nanyuki Kenya" />
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/eBDQSHx3-Eo?autoplay=1&mute=1&loop=1&playlist=eBDQSHx3-Eo&controls=0&showinfo=0&modestbranding=1&playsinline=1&rel=0&disablekb=1"
+        title="Kinyuki Country Hotel background video"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+      ></iframe>
     </div>
+
     <div class="hero-content">
       <div class="container">
         <div class="hero-badge">Nanyuki &nbsp;·&nbsp; Laikipia County &nbsp;·&nbsp; On the Equator</div>
@@ -37,45 +45,44 @@
             <i class="fa fa-calendar-alt"></i> Plan an Event
           </a>
         </div>
+      </div>
+    </div>
 
-        <!-- Quick Booking Widget -->
-        <div class="booking-widget">
-          <div class="booking-widget-title">
-            <i class="fa fa-calendar-check" style="color:var(--gold);margin-right:8px;"></i>
-            Quick Availability Check
-          </div>
-          <div class="booking-grid">
-            <div class="booking-field">
-              <label for="checkin">Check-In</label>
-              <input type="date" id="checkin" name="checkin" />
-            </div>
-            <div class="booking-field">
-              <label for="checkout">Check-Out</label>
-              <input type="date" id="checkout" name="checkout" />
-            </div>
-            <div class="booking-field">
-              <label for="guests">Guests</label>
-              <select id="guests" name="guests">
-                <option>1 Guest</option>
-                <option>2 Guests</option>
-                <option>3 Guests</option>
-                <option>4 or more Guests</option>
-              </select>
-            </div>
-            <div class="booking-field">
-              <label for="room-type">Room Type</label>
-              <select id="room-type" name="room-type">
-                <option>Deluxe Room</option>
-                <option>Superior Room</option>
-                <option>2-Bedroom Cottage</option>
-                <option>3-Bedroom VIP Cottage</option>
-              </select>
-            </div>
-            <button class="booking-submit" id="booking-check-btn" onclick="openBookingModal()">
-              Check Availability
-            </button>
-          </div>
+    <!-- Floating Horizontal Booking Bar -->
+    <div class="booking-bar" id="booking-bar">
+      <div class="booking-bar-inner">
+        <div class="booking-field">
+          <label for="checkin"><i class="fa fa-calendar"></i> Check-In</label>
+          <input type="date" id="checkin" name="checkin" />
         </div>
+        <div class="booking-bar-divider"></div>
+        <div class="booking-field">
+          <label for="checkout"><i class="fa fa-calendar"></i> Check-Out</label>
+          <input type="date" id="checkout" name="checkout" />
+        </div>
+        <div class="booking-bar-divider"></div>
+        <div class="booking-field">
+          <label for="guests"><i class="fa fa-user"></i> Guests</label>
+          <select id="guests" name="guests">
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 or more Guests</option>
+          </select>
+        </div>
+        <div class="booking-bar-divider"></div>
+        <div class="booking-field">
+          <label for="room-type"><i class="fa fa-bed"></i> Room Type</label>
+          <select id="room-type" name="room-type">
+            <option>Deluxe Room</option>
+            <option>Superior Room</option>
+            <option>2-Bedroom Cottage</option>
+            <option>3-Bedroom VIP Cottage</option>
+          </select>
+        </div>
+        <button class="booking-bar-btn" id="booking-check-btn" onclick="openBookingModal()">
+          <i class="fa fa-search"></i> Check Availability
+        </button>
       </div>
     </div>
   </section>
