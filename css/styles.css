@@ -414,7 +414,7 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  overflow: hidden;
+  /* overflow: hidden removed — would clip the absolutely-positioned booking bar */
 }
 .hero-bg {
   position: absolute;
@@ -536,11 +536,11 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
 }
 .booking-bar .booking-field {
   flex: 1;
-  padding: 14px 20px;
+  padding: 14px 16px;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  min-width: 0;
+  min-width: 130px;
 }
 .booking-bar .booking-field label {
   display: flex;
@@ -587,19 +587,21 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
 .booking-bar-btn {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0 32px;
+  gap: 8px;
+  padding: 0 28px;
   background: linear-gradient(135deg, var(--burgundy-mid), var(--burgundy-deep));
   color: var(--cream);
   font-family: var(--font-sans);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
+  min-width: 160px;
+  justify-content: center;
   transition: all var(--transition-smooth);
 }
 .booking-bar-btn i { font-size: 12px; }
