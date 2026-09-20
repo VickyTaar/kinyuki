@@ -413,8 +413,7 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  /* overflow: hidden removed — would clip the absolutely-positioned booking bar */
+  overflow: hidden; /* safe — bg has own overflow:hidden; booking bar is in-flow, not absolute */
 }
 .hero-bg {
   position: absolute;
@@ -427,7 +426,6 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
   position: absolute;
   top: 50%;
   left: 50%;
-  /* 16:9 ratio: whichever dimension is smaller, scale so the other fills */
   width: 100vw;
   height: 56.25vw; /* 16:9 at viewport width */
   min-height: 100vh;
@@ -450,13 +448,14 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
   z-index: 1;
 }
 
+/* hero-content grows to fill available space, pushes booking wrap to bottom */
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 60px 0 0;
-}
-.hero-content .container {
-  padding-bottom: 120px; /* leave room for the floating booking bar */
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  padding: 80px 0 48px;
 }
 
 .hero-badge {
@@ -512,37 +511,42 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
   animation: fadeUp 1s 0.45s ease both;
 }
 
-/* ── Floating Booking Bar ── */
-.booking-bar {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
+/* ── Booking Bar wrap — in-flow flex child, sits at bottom of hero ── */
+.hero-booking-wrap {
+  position: relative;
   z-index: 10;
-  width: calc(100% - 48px);
-  max-width: 1160px;
-  animation: fadeUp 1s 0.65s ease both;
+  padding: 0 24px 28px;
+  width: 100%;
+  animation: fadeUp 1s 0.60s ease both;
 }
+
+/* The actual pill/card */
 .booking-bar-inner {
   display: flex;
   align-items: stretch;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 6px;
   box-shadow: 0 20px 60px rgba(56,11,17,0.32), 0 4px 16px rgba(0,0,0,0.12);
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.70);
+  border: 1px solid rgba(255,255,255,0.80);
+  max-width: 1272px; /* matches container minus padding */
+  margin: 0 auto;
+  width: 100%;
+  min-height: 72px;
 }
-.booking-bar .booking-field {
+
+.booking-field {
   flex: 1;
-  padding: 14px 16px;
+  padding: 14px 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
-  min-width: 130px;
+  min-width: 0;
 }
-.booking-bar .booking-field label {
+.booking-field label {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -553,12 +557,12 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
   color: var(--burgundy-mid);
   white-space: nowrap;
 }
-.booking-bar .booking-field label i {
+.booking-field label i {
   font-size: 9px;
   color: var(--gold);
 }
-.booking-bar .booking-field input,
-.booking-bar .booking-field select {
+.booking-field input,
+.booking-field select {
   width: 100%;
   border: none;
   outline: none;
@@ -572,7 +576,7 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
   appearance: none;
   -webkit-appearance: none;
 }
-.booking-bar .booking-field select {
+.booking-field select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%234A121A'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 2px center;
@@ -587,8 +591,9 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
 .booking-bar-btn {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 28px;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 32px;
   background: linear-gradient(135deg, var(--burgundy-mid), var(--burgundy-deep));
   color: var(--cream);
   font-family: var(--font-sans);
@@ -600,8 +605,7 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 400; line-height: 
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
-  min-width: 160px;
-  justify-content: center;
+  min-width: 168px;
   transition: all var(--transition-smooth);
 }
 .booking-bar-btn i { font-size: 12px; }
@@ -1618,7 +1622,7 @@ footer { background: var(--burgundy-deep); color: var(--cream); }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
   .gallery-item:nth-child(3n+1) { grid-row: auto; }
   .gallery-item:nth-child(3n+1) .gallery-img-wrap { min-height: 218px; }
-  .booking-bar { bottom: 20px; width: calc(100% - 32px); }
+  .hero-booking-wrap { padding: 0 16px 20px; }
   .top-bar .container { flex-direction: column; gap: 7px; }
   .room-full-card { grid-template-columns: 1fr; direction: ltr !important; }
   .room-full-card:nth-child(even) > * { direction: ltr !important; }
@@ -1641,20 +1645,12 @@ footer { background: var(--burgundy-deep); color: var(--cream); }
 }
 
 @media (max-width: 768px) {
-  .booking-bar {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    width: 100%;
-    border-radius: 0;
-    animation: none;
-  }
+  .hero-booking-wrap { padding: 0 0 0; }
   .booking-bar-inner {
     flex-direction: column;
     border-radius: 0;
   }
-  .booking-bar .booking-field {
+  .booking-field {
     padding: 13px 20px;
     border-bottom: 1px solid rgba(74,18,26,0.07);
   }
@@ -1665,26 +1661,18 @@ footer { background: var(--burgundy-deep); color: var(--cream); }
     padding: 18px;
     font-size: 12px;
     letter-spacing: 0.18em;
+    min-width: unset;
   }
-  .hero-content .container { padding-bottom: 48px; }
 }
 
 @media (max-width: 600px) {
   :root { --section-py: 60px; }
-  .booking-bar {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    width: 100%;
-    margin-top: -1px;
-  }
+  .hero-booking-wrap { padding: 0; }
   .booking-bar-inner {
     flex-direction: column;
-    border-radius: 0 0 6px 6px;
-    border-top: 1px solid rgba(74,18,26,0.08);
+    border-radius: 0;
   }
-  .booking-bar .booking-field {
+  .booking-field {
     padding: 12px 18px;
     border-bottom: 1px solid rgba(74,18,26,0.07);
   }
@@ -1694,6 +1682,7 @@ footer { background: var(--burgundy-deep); color: var(--cream); }
     justify-content: center;
     padding: 18px;
     font-size: 12px;
+    min-width: unset;
   }
   .form-row { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1fr; }
